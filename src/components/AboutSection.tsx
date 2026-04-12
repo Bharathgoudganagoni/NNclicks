@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import photographerImg from "@/assets/photographer.jpeg";
+import photographerImg from "@/assets/02.jpg";
 import { Award, Camera, Star, Users } from "lucide-react";
 
 const stats = [

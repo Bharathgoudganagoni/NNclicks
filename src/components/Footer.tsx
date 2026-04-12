@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Youtube } from "lucide-react";
+import { Instagram, Youtube } from "lucide-react";
 
 export default function Footer() {
 
@@ -36,17 +36,7 @@ export default function Footer() {
           <button
             onClick={(e) => {
               e.stopPropagation();
-              openLink("https://www.facebook.com/YOUR_PAGE");
-            }}
-            className="text-muted-foreground hover:text-gold transition-colors duration-300"
-          >
-            <Facebook size={16} />
-          </button>
-
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              openLink("https://www.youtube.com/@YOUR_CHANNEL");
+              openLink("https://www.youtube.com/@nageshphotography4197");
             }}
             className="text-muted-foreground hover:text-gold transition-colors duration-300"
           >

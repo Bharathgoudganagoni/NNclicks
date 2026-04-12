@@ -1,12 +1,12 @@
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import weddingImg from "@/assets/gallery-wedding.jpg";
-import fashionImg from "@/assets/gallery-fashion.jpg";
-import portraitImg from "@/assets/gallery-portrait.jpg";
+import fashionImg from "@/assets/gallery-fashion.jpeg";
+import portraitImg from "@/assets/gallery-portrait.jpeg";
 import eventsImg from "@/assets/gallery-events.jpg";
 import natureImg from "@/assets/gallery-nature.jpg";
-import commercialImg from "@/assets/gallery-commercial.jpg";
-import { X, ZoomIn } from "lucide-react";
+import commercialImg from "@/assets/photographer.jpeg";
+import { X, ZoomIn, Download } from "lucide-react";
 
 const categories = ["All", "Weddings", "Fashion", "Portraits", "Events", "Nature", "Commercial"];
 
@@ -127,12 +127,24 @@ export default function GallerySection() {
                 <h3 className="font-display text-2xl text-foreground">{lightbox.title}</h3>
                 <span className="text-gold text-xs tracking-widest uppercase">{lightbox.category}</span>
               </div>
-              <button
-                onClick={() => setLightbox(null)}
-                className="absolute top-4 right-4 text-white/70 hover:text-gold transition-colors"
-              >
-                <X size={28} />
-              </button>
+              <div className="absolute top-4 right-4 flex items-center gap-4">
+                <a
+                  href={lightbox.src}
+                  download={`${lightbox.title.replace(/\s+/g, '-').toLowerCase()}.jpg`}
+                  className="text-white/70 hover:text-gold transition-colors"
+                  title="Download Image"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Download size={28} />
+                </a>
+                <button
+                  onClick={() => setLightbox(null)}
+                  className="text-white/70 hover:text-gold transition-colors"
+                  title="Close"
+                >
+                  <X size={28} />
+                </button>
+              </div>
             </motion.div>
           </motion.div>
         )}

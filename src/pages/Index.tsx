@@ -1,4 +1,3 @@
-import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -7,11 +6,12 @@ import ServicesSection from "@/components/ServicesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import MusicPlayer from "@/components/MusicPlayer";
+import ImageFramer from "@/components/ImageFramer";
 
 const Index = () => {
   return (
     <main className="film-grain">
-      <CustomCursor />
       <Navbar />
       <HeroSection />
       <AboutSection />
@@ -20,6 +20,8 @@ const Index = () => {
       <TestimonialsSection />
       <ContactSection />
       <Footer />
+      <MusicPlayer />
+      <ImageFramer />
     </main>
   );
 };

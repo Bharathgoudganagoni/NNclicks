@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroBg from "@/assets/b2.jpeg";
+import heroBg from "@/assets/NNOO9071 copy.jpg";
 
 export default function HeroSection() {
   const scrollToPortfolio = () => {
