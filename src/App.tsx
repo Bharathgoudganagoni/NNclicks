@@ -7,17 +7,12 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    {/* Removed TooltipProvider (missing component) */}
-
-    {/* Add basename so routes work correctly on GitHub Pages */}
-    <BrowserRouter basename="/NNclicks">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />
-        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-
   </QueryClientProvider>
 );
 
