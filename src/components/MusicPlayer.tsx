@@ -57,7 +57,7 @@ export default function MusicPlayer() {
         },
         events: {
           onReady: (event: any) => {
-            event.target.setVolume(5); // Very low sound
+            event.target.setVolume(12); // Very low sound
             
             // Force autoplay immediately without waiting for interaction
             if (document.visibilityState === 'visible') {
